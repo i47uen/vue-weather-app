@@ -1,13 +1,6 @@
 <template>
   <div>
-    <span class="bookmarks" @click="toggleList" :class="{active: isActive}">{{ isActive ? "-" : "+" }}</span>
-    <div class="bookmarks-list" :class="{active: isActive}">
-      <ul>
-        <li @click="setActive">
-          <p>London</p> <span class="remove" >x</span>
-        </li>
-      </ul>
-    </div>
+
   </div>
 </template>
 
