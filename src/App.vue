@@ -23,7 +23,7 @@
       <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
           <div class="location">{{ weather.name }}, {{ weather.sys.country }}
-            <span @click="addToBookmarks()">★</span>
+            <span @click="addToBookmarks()" @click.once="bm_isActive = true" >★</span>
           </div>
           <div class="date">{{ dateBuilder() }}</div>
         </div>
@@ -52,7 +52,9 @@ export default {
     weather: {},
     bm_isActive: false,
     bookmarks: [
-      {title:"Moscow"}
+      {title: "Moscow"},
+      {title: "Novosibirsk"},
+      {title: "Воронеж"}
     ]
   }),
   methods: {
